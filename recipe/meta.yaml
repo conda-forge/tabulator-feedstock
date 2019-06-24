@@ -9,7 +9,7 @@ source:
   sha256: f22b824e97ded3caf7b0dd2b5e23418f78cc395cba6b4b33eb043c976ffcc78e
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - tabulator = tabulator.cli:cli
@@ -20,18 +20,18 @@ requirements:
     - python
     - pip
   run:
-    - cchardet >=1.0,<2.0
-    - click >=6.0,<7.0
-    - ijson >=2.0,<3.0
-    - jsonlines >=1.1,<2.0
-    - linear-tsv >=1.0,<2.0
-    - openpyxl >=2.4,<2.5
     - python
-    - requests >=2.8,<3.0
-    - six >=1.9,<2.0
-    - sqlalchemy >=0.9.6,<2.0
-    - unicodecsv >=0.14,<2.0
-    - xlrd >=1.0,<2.0
+    - cchardet >=1.0
+    - click >=6.0
+    - ijson >=2.0
+    - jsonlines >=1.1
+    - linear-tsv >=1.0
+    - openpyxl >=2.4,<2.5
+    - requests >=2.8
+    - six >=1.9
+    - sqlalchemy >=0.9.6
+    - unicodecsv >=0.14
+    - xlrd >=1.0
 
 test:
   imports:
@@ -41,9 +41,6 @@ test:
     - tabulator.writers
   commands:
     - tabulator --help
-  requires:
-    - pylama
-    - tox
 
 about:
   home: https://github.com/frictionlessdata/tabulator-py
