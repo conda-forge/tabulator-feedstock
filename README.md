@@ -117,4 +117,5 @@ Feedstock Maintainers
 =====================
 
 * [@ocefpaf](https://github.com/ocefpaf/)
+* [@roll](https://github.com/roll/)
 
