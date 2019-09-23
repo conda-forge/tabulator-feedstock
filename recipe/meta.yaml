@@ -1,4 +1,4 @@
-{% set version = "1.25.1" %}
+{% set version = "1.26.1" %}
 
 package:
   name: tabulator
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/t/tabulator/tabulator-{{ version }}.tar.gz
-  sha256: cfc9812c0053f3f9eaab704b493a09e478608bdfe55fccae721b0863cdc510c1
+  sha256: 30d5445b13b71d98b5d35f488f633ba2960eb4ad9955510286e4da8f8fa3a96c
 
 build:
   number: 0
@@ -21,17 +21,26 @@ requirements:
     - pip
   run:
     - python
-    - cchardet >=1.0
-    - click >=6.0
-    - ijson >=2.0
-    - jsonlines >=1.1
-    - linear-tsv >=1.0
-    - openpyxl >=2.4,<2.5
-    - requests >=2.8
+    # General
     - six >=1.9
-    - sqlalchemy >=0.9.6
+    - click >=6.0
+    - requests >=2.8
+    - cchardet >=1.0
+    - boto3 >=1.9
+    # Format: csv
     - unicodecsv >=0.14
+    # Format: json
+    - ijson >=2.5
+    # Format: ndjson
+    - jsonlines >=1.1
+    # Format: sql
+    - sqlalchemy >=0.9.6
+    # Format: tsv
+    - linear-tsv >=1.0
+    # Format: xls
     - xlrd >=1.0
+    # Format: xlsx
+    - openpyxl >=2.6
 
 test:
   imports:
