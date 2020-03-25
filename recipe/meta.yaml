@@ -43,6 +43,8 @@ requirements:
     - openpyxl >=2.6
 
 test:
+  requires:
+    - pip
   imports:
     - tabulator
     - tabulator.loaders
@@ -50,6 +52,7 @@ test:
     - tabulator.writers
   commands:
     - tabulator --help
+    - pip check
 
 about:
   home: https://github.com/frictionlessdata/tabulator-py
