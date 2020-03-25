@@ -1,4 +1,4 @@
-{% set version = "1.36.0" %}
+{% set version = "1.37.1" %}
 
 package:
   name: tabulator
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/t/tabulator/tabulator-{{ version }}.tar.gz
-  sha256: 527ff0a2e1432ff35c6c0665b2e11e5c764a2bfc98e6f460ab3e0321bd4eeb4f
+  sha256: 26de88496a0d2e9e17689e28ec8620c3c07adb4b16efd8f50b36de12cef6ceb0
 
 build:
   number: 0
@@ -43,6 +43,8 @@ requirements:
     - openpyxl >=2.6
 
 test:
+  requires:
+    - pip
   imports:
     - tabulator
     - tabulator.loaders
@@ -50,6 +52,7 @@ test:
     - tabulator.writers
   commands:
     - tabulator --help
+    - pip check
 
 about:
   home: https://github.com/frictionlessdata/tabulator-py
