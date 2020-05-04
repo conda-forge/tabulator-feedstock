@@ -1,4 +1,4 @@
-{% set version = "1.41.0" %}
+{% set version = "1.42.0" %}
 
 package:
   name: tabulator
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/t/tabulator/tabulator-{{ version }}.tar.gz
-  sha256: abd08fc351a80955ff547eb5a6024b43ca692f67dd4001b4835b673cc347b5e1
+  sha256: 06af010c396605b931f94b3d705b88ff21d75d10402c9679595b481b4f202740
 
 build:
   number: 0
