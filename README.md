@@ -5,11 +5,9 @@ Home: https://github.com/frictionlessdata/tabulator-py
 
 Package license: MIT
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/tabulator-feedstock/blob/master/LICENSE.txt)
 
 Summary: Consistent interface for stream reading and writing tabular data (csv/xls/json/etc)
-
-
 
 Current build status
 ====================
