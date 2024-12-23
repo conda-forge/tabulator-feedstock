@@ -5,22 +5,23 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/t/tabulator/tabulator-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/t/tabulator/tabulator-{{ version }}.tar.gz
   sha256: 0e2887d0b36483a292e75b118d7f03e710c1337435553b5f62d2a7a891b7fe55
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - tabulator = tabulator.cli:cli
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   host:
-    - python >=3
+    - python {{ python_min }}
+    - setuptools
     - pip
   run:
-    - python >=3
+    - python >={{ python_min }}
     - boto3 >=1.9
     - chardet >=3.0
     - click >=6.0
@@ -38,6 +39,7 @@ requirements:
 test:
   requires:
     - pip
+    - python {{ python_min }}
   imports:
     - tabulator
     - tabulator.loaders
